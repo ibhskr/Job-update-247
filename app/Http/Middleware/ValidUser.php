@@ -1,0 +1,28 @@
+<?php
+
+namespace App\Http\Middleware;
+
+use Closure;
+use Illuminate\Container\Attributes\Auth;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth as FacadesAuth;
+use Symfony\Component\HttpFoundation\Response;
+
+class ValidUser
+{
+    /**
+     * Handle an incoming request.
+     *
+     * @param  Closure(Request): (Response)  $next
+     */
+    public function handle(Request $request, Closure $next): Response
+    {
+        echo "<h3>side under mantainance</h3>";
+        
+        if (FacadesAuth::check()) {
+            return $next($request);
+        } else {
+            return redirect("admin");
+        }
+    }
+}

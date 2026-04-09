@@ -2,7 +2,7 @@
 
 A modern **Government Job Portal Web Application** built with **Laravel + Tailwind CSS**.
 This platform helps users stay updated with the latest job notifications, results, admit cards, and study resources.
-
+ 
 ---
 
 ## ✨ Features
